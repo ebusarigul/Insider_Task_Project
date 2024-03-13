@@ -14,6 +14,7 @@ public class TC01_Case {
     public void insider() {
 
         //1)Visit https://useinsider.com/ and check Insider home page is opened or not
+
         Driver.getDriver().get(ConfigReader.getProperty("insiderUrl"));
         ReusableMethods.checkEqualsUrl("https://useinsider.com/",Driver.getDriver().getCurrentUrl());
         ReusableMethods.waitTillClickableAndClickIt(insiderPage.btn_acceptAll);
@@ -21,8 +22,8 @@ public class TC01_Case {
         ReusableMethods.checkElementVisible(insiderPage.btn_login);
         ReusableMethods.checkElementVisible(insiderPage.btn_getADemo);
 
-        //2) Select the “Company” menu in the navigation bar, select “Careers” and check Career
-        //   page, its Locations, Teams, and Life at Insider blocks are open or not
+        //2)Select the “Company” menu in the navigation bar, select “Careers” and check Career
+        //  page, its Locations, Teams, and Life at Insider blocks are open or not
 
         ReusableMethods.waitTillClickableAndClickIt(insiderPage.ddown_companyMenu);
         ReusableMethods.waitTillClickableAndClickIt(insiderPage.btn_careers);
